@@ -12,21 +12,18 @@ jobs:
              matrix: 
                  go: ['1.22','1.23','1.24']
          steps:
-              # Lint
-           - name: Code Checkout
-             uses: actions/checkout@v7
+            - name: Code Checkout
+              uses: actions/checkout@v4
 
-           - name: Setup Go
-             uses: actions/setup-go@v6
-             with:  
-                go-version: ${{ matrix.go }}
-                go-version-file: 'go.mod'
-                cache-dependency-path: go.sum
+            - name: Setup Go
+              uses: actions/setup-go@v4
+              with:  
+                 go-version: ${{ matrix.go }}
 
-           - name: Run Go Formatter
-             run: go fmt
-             working-directory: backend
+            - name: Run Go Formatter
+              run: go fmt ./...
+              working-directory: backend
 
-           - name: Run Go Vet
-             run: go Vet
-             working-directory: backend
+            - name: Run Go Vet
+              run: go vet ./...
+              working-directory: backend
