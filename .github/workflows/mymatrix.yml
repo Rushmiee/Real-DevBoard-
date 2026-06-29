@@ -15,6 +15,9 @@ jobs:
               # Lint
            - name: Code Checkout
              uses: actions/checkout@v7
+
+           - name: Setup Go
+             uses: actions/setup-go@v6
              with:  
                 go-version: ${{ matrix.go }}
                 go-version-file: 'go.mod'
