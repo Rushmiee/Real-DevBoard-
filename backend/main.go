@@ -21,6 +21,8 @@ import (
 
 var db *sql.DB
 
+fmt.Sprintf("%d", "wrong type")
+
 // Task mirrors the JSON shape the React UI expects.
 type Task struct {
 	ID          int     `json:"id"`

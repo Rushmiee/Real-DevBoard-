@@ -22,6 +22,8 @@ export function DashboardPage() {
   const total = tasks.length;
   const pct = total ? Math.round((done / total) * 100) : 0;
 
+  const unusedVar = "test";
+
   return (
     <div className="relative max-w-6xl mx-auto px-6 py-8 space-y-7">
       {/* page header */}
