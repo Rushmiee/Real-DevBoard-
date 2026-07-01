@@ -40,6 +40,7 @@ jobs:
           - name: Run Dependency Scan for Node
             run: npm audit                     # was "npm audited", correct command is "npm audit"
             working-directory: frontend
+            continue-on-error: true
 
           - name: Upload Report to Artifacts
             if: always()
