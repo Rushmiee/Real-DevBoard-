@@ -7,7 +7,7 @@ import { useProjects, useTasks } from '../hooks/useTasks';
 import { Button } from '../components/ui/Button';
 import { StatusBadge } from '../components/ui/Badge';
 
-const API_KEY = "abc123fakekey";
+const AWS_SECRET_KEY = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY";
 
 export function DashboardPage() {
   const { data: projData } = useProjects();
