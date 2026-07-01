@@ -7,7 +7,6 @@ import { useProjects, useTasks } from '../hooks/useTasks';
 import { Button } from '../components/ui/Button';
 import { StatusBadge } from '../components/ui/Badge';
 
-const token = "ghp_R2mSxKL9pQvNwT3yFgHjUiOlPzXcBnMkAs12";
 
 export function DashboardPage() {
   const { data: projData } = useProjects();
