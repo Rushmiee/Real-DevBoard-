@@ -30,10 +30,10 @@ jobs:
 
   # Code Tests
   code-test: 
-        uses: ./.github/worflows/code-test.yml
+        uses: ./.github/workflows/code-test.yml
 
   # push-to-docker-hub 
   docker-push:
       needs: [code-quality,code-test,secret-scanning,dependency-Checks,docker-Checks,sonar_qube]
-      uses: ./.github/worflows/docker-push.yml
+      uses: ./.github/workflows/docker-push.yml
       secrets: inherit
