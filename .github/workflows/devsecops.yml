@@ -29,7 +29,7 @@ jobs:
         secrets: inherit
 
   # Code Tests
-  code-tests: 
+  code-test: 
         uses: ./.github/worflows/code-test.yml
 
   # push-to-docker-hub 
