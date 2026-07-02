@@ -34,6 +34,6 @@ jobs:
 
   # push-to-docker-hub 
   docker-push:
-      needs: [code-quality,code-tests,secret-scanning,dependency-Checks,docker-Checks,sonar_qube]
+      needs: [code-quality,code-test,secret-scanning,dependency-Checks,docker-Checks,sonar_qube]
       uses: ./.github/worflows/docker-push.yml
       secrets: inherit
